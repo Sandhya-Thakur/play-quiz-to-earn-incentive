@@ -30,29 +30,42 @@ Follow these steps to clone and run the QuizBounty repository, install required 
    ```bash
    git clone https://git@github.com:Sandhya-Thakur/play-quiz-to-earn-incentive.git
    cd QuizBounty
-# Install langchain
+## Install langchain
+```bash
 npm install langchain
 
-# Install OpenAI 
+## Install OpenAI
+
 npm install openai
 
-# Use Clerk for authentication 
 
-# Install shadcn for UI
+
+## Use Clerk for authentication
+
+
+## Install shadcn for UI
+
 npx shadcn-ui@latest init
 
 
-# Install other dependencies (if any)
+## Install other dependencies (if any)
+
 npm install
 
-# Set up environment variables. Create a .env file in the project root 
+## Set up environment variables. Create a .env file in the project root 
 
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+
 CLERK_SECRET_KEY=
+
 NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+
 NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+
 NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
+
 NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
+
 NEXT_PUBLIC_OPENAI_API_KEY=
 
 ---
