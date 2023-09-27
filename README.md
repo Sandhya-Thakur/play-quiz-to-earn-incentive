@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# QuizBounty
 
-## Getting Started
+**Description:** "QuizBounty" is an AI-driven quiz platform with a mission to combine knowledge enrichment with rewards and engagement. Our vision is to make learning fun and rewarding, encouraging users to explore a wide range of quiz categories while expanding their horizons and earning incentives along the way.
 
-First, run the development server:
+## Logo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+![QuizBounty Logo](URL_COPIED_FROM_GITHUB)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Key Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### AI-Powered Quizzes
+QuizBounty leverages advanced AI algorithms to create personalized quizzes that adapt to users' skill levels, offering an engaging and challenging experience for all.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Diverse Quiz Categories
+Explore a vast array of quiz categories, from pop culture to science, ensuring there's something to pique everyone's interest and expand their knowledge.
 
-## Learn More
+### Incentive-Based Rewards
+We offer a rewarding experience where users earn incentives, prizes, and rewards as they conquer quizzes and accumulate scores. The more you play, the more you earn!
 
-To learn more about Next.js, take a look at the following resources:
+## Working Video
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[![Watch the Demo](link_to_your_video_thumbnail_image)](link_to_your_video)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<p style="text-align: center; color: #0074e4; font-size: 20px;"><b>Join QuizBounty and embark on a journey of knowledge and rewards!</b></p>
