@@ -20,6 +20,41 @@ We offer a rewarding experience where users earn incentives, prizes, and rewards
 ## Working Video
 
 [![Watch the video](https://github.com/Sandhya-Thakur/play-quiz-to-earn-incentive/blob/main/public/thumnail1.png)](https://youtu.be/TXJKPOUbcx0)
+
+## Getting Started
+
+Follow these steps to clone and run the QuizBounty repository, install required dependencies, and set environment variables:
+
+1. Clone the repository to your local machine:
+
+   ```bash
+   git clone https://git@github.com:Sandhya-Thakur/play-quiz-to-earn-incentive.git
+   cd QuizBounty
+# Install langchain
+npm install langchain
+
+# Install OpenAI 
+npm install openai
+
+# Use Clerk for authentication 
+
+# Install shadcn for UI
+npx shadcn-ui@latest init
+
+
+# Install other dependencies (if any)
+npm install
+
+# Set up environment variables. Create a .env file in the project root 
+
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
+NEXT_PUBLIC_OPENAI_API_KEY=
+
 ---
 
 <p style="text-align: center; color: #0074e4; font-size: 20px;"><b>Join QuizBounty and embark on a journey of knowledge and rewards!</b></p>
