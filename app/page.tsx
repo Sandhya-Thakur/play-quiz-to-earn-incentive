@@ -15,11 +15,8 @@ export default function Home() {
         <ModeToggle />
       </div>
       <div className="flex justify-center items-center h-screen">
-      
-        <Quiz/>
-      
+        <Quiz />
       </div>
-
     </main>
   );
 }

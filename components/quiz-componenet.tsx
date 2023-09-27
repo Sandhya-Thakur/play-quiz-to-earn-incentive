@@ -10,17 +10,12 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { useState, useEffect } from "react";
 import { OpenAI } from "langchain/llms/openai";
 import { BufferMemory } from "langchain/memory";
 import { ConversationChain } from "langchain/chains";
+import CorrectAnswers from "@/components/correct-answers";
+import AttemptedQuestions from "@/components/attempted-question";
 
 export function Quiz() {
   const model = new OpenAI({
@@ -96,7 +91,7 @@ export function Quiz() {
     // Add a check to prevent multiple increments
     if (!response) {
       const result = await run(
-        `AI: ${response}\nYou: ${input}\nAI: Evaluate the answer and give result strictly in the form of "Its Correct" or "Its not Correct".`
+        `AI: ${response}\nYou: ${input}\nAI: Evaluate the answer and give result in one line  "Its Correct" or "Its not Correct".`
       );
 
       // Check if the response contains "Its Correct" (modify this check according to your actual response format)
@@ -147,16 +142,16 @@ export function Quiz() {
                   type="text"
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
+                  className="shadow-2xl  shadow-blue-500/40 resize-y rounded-md"
                 />
               </div>
               <div className="space-y-2.5">
                 <select
                   value={category}
                   onChange={handleCategoryChange}
-                  className="bg-blend-lighten md:bg-blend-darken opacity-50 hover:opacity-100 p-4 w-full sm:w-11/12 md:w-3/4 lg:w-2/3 xl:w-1/2 mix-blend-multiply md:mix-blend-overlay"
-                 
+                  className="opacity-50 hover:opacity-100 p-4 w-full sm:w-11/12 md:w-3/4 lg:w-2/3 xl:w-1/2 shadow-2xl  shadow-blue-500/40 resize-y rounded-md"
                 >
-                  <option  value="">Select a category</option>
+                  <option value="">Select a category</option>
                   {categories.map((category) => (
                     <option key={category.value} value={category.value}>
                       {category.label}
@@ -190,47 +185,38 @@ export function Quiz() {
             </div>
           </form>
         </CardContent>
-        <CardFooter className="flex justify-between mt-4">
-          {question && (
-            <div >
-              <p className="" >{question}</p>
-            </div>
-          )}
-          {response && (
-            <div>
-              <p className="" >{response}</p>
-            </div>
-          )}
+        <Card className="w-full p-6 border-solid border-2 border-grey-800 shadow-2xl  shadow-blue-500/40 resize-y rounded-md">
+          <CardContent>
+            {question && (
+              <div>
+                <p className="">{question}</p>
+              </div>
+            )}
+            {response && (
+              <div>
+                <p className="">{response}</p>
+              </div>
+            )}
+          </CardContent>
+        </Card>
+        <Card className="w-full p-6 border-solid border-2 border-grey-800 shadow-2xl  shadow-blue-500/40 resize-y rounded-md">
+          <CardContent>
+            {showCorrectAnswersModal && (
+              <CorrectAnswers
+                correctAnswers={correctAnswers}
+                attemptedQuestions={attemptedQuestions}
+                onClose={toggleCorrectAnswersModal}
+              />
+            )}
 
-          {showCorrectAnswersModal && (
-            <div className="font-sans roundedoutline outline-offset-2 outline-1  hover:outline-2">
-              <h2>Your Correct Answers</h2>
-              <p>Correct Answers: {correctAnswers}</p>
-              <p>Questions Attempted: {attemptedQuestions}</p>{" "}
-              {/* Display the number of attempted questions */}
-              <button
-                onClick={toggleCorrectAnswersModal}
-                className="px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600 shadow-2xl  shadow-blue-500/40"
-              >
-                Close
-              </button>
-            </div>
-          )}
-
-          {showTotalAttemptedQuestions && (
-            <div className="font-sans rounded outline outline-offset-2 outline-1  hover:outline-2">
-              <h2>Total Attempted Questions</h2>
-              <p>Total Questions Attempted: {attemptedQuestions}</p>{" "}
-              {/* Display the total number of attempted questions */}
-              <button
-                onClick={toggleTotalAttemptedQuestions}
-                className="px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600 shadow-2xl  shadow-blue-500/40"
-              >
-                Close
-              </button>
-            </div>
-          )}
-        </CardFooter>
+            {showTotalAttemptedQuestions && (
+              <AttemptedQuestions
+                attemptedQuestions={attemptedQuestions}
+                onClose={toggleTotalAttemptedQuestions}
+              />
+            )}
+          </CardContent>
+        </Card>
       </Card>
     </div>
   );
