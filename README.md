@@ -19,7 +19,7 @@ We offer a rewarding experience where users earn incentives, prizes, and rewards
 
 ## Working Video
 
-[![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://youtu.be/TXJKPOUbcx0)
+[![Watch the video](https://github.com/Sandhya-Thakur/play-quiz-to-earn-incentive/blob/main/public/thumnail1.png)](https://youtu.be/TXJKPOUbcx0)
 ---
 
 <p style="text-align: center; color: #0074e4; font-size: 20px;"><b>Join QuizBounty and embark on a journey of knowledge and rewards!</b></p>
