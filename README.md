@@ -2,9 +2,9 @@
 
 **Description:** "QuizBounty" is an AI-driven quiz platform with a mission to combine knowledge enrichment with rewards and engagement. Our vision is to make learning fun and rewarding, encouraging users to explore a wide range of quiz categories while expanding their horizons and earning incentives along the way.
 
-## Logo
-
-![QuizBounty Logo](URL_COPIED_FROM_GITHUB)
+<div style="text-align:center;">
+  <img src="URL_COPIED_FROM_GITHUB" alt="QuizBounty Logo" width="200" height="auto" style="max-width:100%;">
+</div>
 
 ## Key Features
 
@@ -19,7 +19,12 @@ We offer a rewarding experience where users earn incentives, prizes, and rewards
 
 ## Working Video
 
-[![Watch the Demo](link_to_your_video_thumbnail_image)](link_to_your_video)
+<div style="text-align:center;">
+  <video width="640" height="360" controls style="max-width:100%;">
+    <source src="link_to_your_video" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
 
 ---
 
