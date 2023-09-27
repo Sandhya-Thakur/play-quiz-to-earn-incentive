@@ -19,13 +19,7 @@ We offer a rewarding experience where users earn incentives, prizes, and rewards
 
 ## Working Video
 
-<div style="text-align:center;">
-  <video width="640" height="360" controls style="max-width:100%;">
-    <source src="link_to_your_video" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</div>
-
+[![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://youtu.be/TXJKPOUbcx0)
 ---
 
 <p style="text-align: center; color: #0074e4; font-size: 20px;"><b>Join QuizBounty and embark on a journey of knowledge and rewards!</b></p>
