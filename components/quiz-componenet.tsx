@@ -24,7 +24,7 @@ import { ConversationChain } from "langchain/chains";
 
 export function Quiz() {
   const model = new OpenAI({
-    openAIApiKey: process.env.OPENAI_API_KEY,
+    openAIApiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
     temperature: 0.9,
   });
 
