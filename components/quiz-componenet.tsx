@@ -212,7 +212,7 @@ export function Quiz() {
                 onClose={toggleCorrectAnswersModal}
               />
             )}
-            {correctAnswers && (
+            {correctAnswers >= 5 && (
               <div className="mt-4 text-center">
                 <a
                   href="/reward" // adjust this to your reward route
