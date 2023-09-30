@@ -49,6 +49,7 @@ export function Quiz() {
   const [attemptedQuestions, setAttemptedQuestions] = useState(0); // Track the number of attempted questions
   const [showTotalAttemptedQuestions, setShowTotalAttemptedQuestions] =
     useState(false);
+  const [earnedReward, setEarnedReward] = useState(false); // <-- NEW STATE
 
   const handleCategoryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedCategory = e.target.value;
@@ -109,6 +110,9 @@ export function Quiz() {
       setAttemptedQuestions(
         (prevAttemptedQuestions) => prevAttemptedQuestions + 1
       );
+    }
+    if (correctAnswers >= 5) {
+      setEarnedReward(true);
     }
   };
 
@@ -207,6 +211,16 @@ export function Quiz() {
                 attemptedQuestions={attemptedQuestions}
                 onClose={toggleCorrectAnswersModal}
               />
+            )}
+            {correctAnswers && (
+              <div className="mt-4 text-center">
+                <a
+                  href="/reward" // adjust this to your reward route
+                  className="text-blue-500 hover:underline"
+                >
+                  Collect your reward
+                </a>
+              </div>
             )}
 
             {showTotalAttemptedQuestions && (
