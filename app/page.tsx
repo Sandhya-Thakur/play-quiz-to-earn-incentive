@@ -1,3 +1,4 @@
+"use-client"
 import { ModeToggle } from "@/components/theme-toggle-button";
 import { AvatarDemo } from "@/components/quiz-logo";
 import { UserButton } from "@clerk/nextjs";
